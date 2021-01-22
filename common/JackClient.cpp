@@ -1225,7 +1225,8 @@ char* JackClient::GetInternalClientName(int ref)
 
 int JackClient::InternalClientHandle(const char* client_name, jack_status_t* status)
 {
-    int int_ref, result = -1;
+    int int_ref = 0;
+    int result = -1;
     fChannel->InternalClientHandle(GetClientControl()->fRefNum, client_name, (int*)status, &int_ref, &result);
     return int_ref;
 }
@@ -1257,7 +1258,8 @@ int JackClient::InternalClientLoad(const char* client_name, jack_options_t optio
         return 0;
     }
 
-    int int_ref, result = -1;
+    int int_ref = 0
+    int result = -1;
     fChannel->InternalClientLoad(GetClientControl()->fRefNum, client_name, va->load_name, va->load_init, options, (int*)status, &int_ref, -1, &result);
     return int_ref;
 }

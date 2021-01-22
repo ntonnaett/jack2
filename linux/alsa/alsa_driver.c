@@ -860,7 +860,7 @@ alsa_driver_set_parameters (alsa_driver_t *driver,
 			malloc (sizeof (char *) * driver->playback_nchannels);
 		memset (driver->playback_addr, 0,
 			sizeof (char *) * driver->playback_nchannels);
-		driver->playback_interleave_skip = (unsigned long *)
+		driver->playback_interleave_skip = (unsigned long **)
 			malloc (sizeof (unsigned long *) * driver->playback_nchannels);
 		memset (driver->playback_interleave_skip, 0,
 			sizeof (unsigned long *) * driver->playback_nchannels);
@@ -886,7 +886,7 @@ alsa_driver_set_parameters (alsa_driver_t *driver,
 			malloc (sizeof (char *) * driver->capture_nchannels);
 		memset (driver->capture_addr, 0,
 			sizeof (char *) * driver->capture_nchannels);
-		driver->capture_interleave_skip = (unsigned long *)
+		driver->capture_interleave_skip = (unsigned long **)
 			malloc (sizeof (unsigned long *) * driver->capture_nchannels);
 		memset (driver->capture_interleave_skip, 0,
 			sizeof (unsigned long *) * driver->capture_nchannels);
